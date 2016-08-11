@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>week07day02</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- <script type="text/javascript" src="jquery/jquery-3.1.0.js"></script> -->
+	<!-- <script type="text/javascript" src="jquery/main.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+</head>
+<body>
+<section id="home">
+	<ul>
+	  <li>
+		<a class href ="#menu">ABOUT US</a>
+		<a class href ="#main">NEWS</a>
+		<a class href="#middle">PORTFOLIO</a>
+		<a class href ="#footer">SERVICE</a>
+	 </li>
+	</ul>
+</section>
+<section id="menu"></section>
+<section id="main"></section>
+<section id="middle"></section>
+<section id="footer"></section>
+
+
+
+</body>
+</html>
+
+
+
+<script>
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+
+    
+    if (this.hash !== "") {
+      
+      event.preventDefault();
+
+      
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 3000, function(){
+       window.location.hash = hash;
+      });
+    } 
+  });
+});
+</script>
